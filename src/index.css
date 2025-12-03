@@ -13,7 +13,7 @@
     --popover: 222 47% 5%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 160 100% 50%;
+    --primary: 163 33% 57%;
     --primary-foreground: 222 47% 3%;
 
     --secondary: 222 30% 12%;
@@ -22,7 +22,7 @@
     --muted: 222 30% 15%;
     --muted-foreground: 220 10% 55%;
 
-    --accent: 160 100% 50%;
+    --accent: 163 33% 57%;
     --accent-foreground: 222 47% 3%;
 
     --destructive: 0 84% 60%;
@@ -30,12 +30,12 @@
 
     --border: 222 20% 18%;
     --input: 222 20% 18%;
-    --ring: 160 100% 50%;
+    --ring: 163 33% 57%;
 
     --radius: 0.5rem;
 
     /* Custom portfolio tokens */
-    --accent-glow: 160 100% 50%;
+    --accent-glow: 163 33% 57%;
     --surface-elevated: 222 47% 7%;
     --text-primary: 0 0% 98%;
     --text-secondary: 220 10% 70%;
@@ -52,7 +52,7 @@
     --popover: 222 47% 5%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 160 100% 50%;
+    --primary: 163 33% 57%;
     --primary-foreground: 222 47% 3%;
 
     --secondary: 222 30% 12%;
@@ -61,7 +61,7 @@
     --muted: 222 30% 15%;
     --muted-foreground: 220 10% 55%;
 
-    --accent: 160 100% 50%;
+    --accent: 163 33% 57%;
     --accent-foreground: 222 47% 3%;
 
     --destructive: 0 62% 30%;
@@ -69,7 +69,7 @@
 
     --border: 222 20% 18%;
     --input: 222 20% 18%;
-    --ring: 160 100% 50%;
+    --ring: 163 33% 57%;
   }
 }
 
