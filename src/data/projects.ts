@@ -13,7 +13,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "project-password-generator",
-    title: "Secure Password Generator with Fisher-Yates Shuffle",
+    title: "Secure Password Generator",
     subtitle: "JavaScript, HTML, CSS • Feb 2026",
     description: "Password generator with guaranteed character type inclusion and Fisher-Yates shuffle to eliminate positional bias. Features a modern flexbox UI with clipboard API integration for seamless copy functionality.",
     tags: ["JavaScript", "HTML", "CSS"],
