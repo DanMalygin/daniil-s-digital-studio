@@ -21,10 +21,12 @@ const itemVariants = {
 };
 
 const timeline = [
-  { year: "2021", event: "Started Computer Science degree" },
-  { year: "2023", event: "First full-stack freelance project" },
-  { year: "2024", event: "Built ASR system for social robots" },
-  { year: "2025", event: "Launched SaaS platform" },
+  { year: "2022", event: "Started Computer Science at VU Amsterdam" },
+  { year: "2023", event: "Launched Lichtique & MTCH Shopify Brands" },
+  { year: "2025", event: "Built real-time ASR system for human-robot interaction" },
+  { year: "2025", event: "Frontend & UI developer at Radius" },
+  { year: "2025", event: "Founding Team & Strategy at Mirai" },
+  { year: "2026", event: "Built Password Generator, working on the next project" },
 ];
 
 export function AboutSection() {
@@ -32,7 +34,7 @@ export function AboutSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-32 relative" ref={ref}>
+    <section id="about" className="py-32 relative scroll-mt-20" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.div
           variants={containerVariants}
@@ -48,20 +50,13 @@ export function AboutSection() {
             {/* Bio */}
             <motion.div variants={itemVariants} className="space-y-6">
               <p className="text-lg text-foreground leading-relaxed">
-                I'm a software engineer passionate about building products that make a difference. 
-                My journey started with a curiosity for how things work under the hood — which 
-                eventually led me to computer science and software development.
+                I'm a Computer Science graduate from VU Amsterdam, building things for the web. Ranging from e-commerce storefronts to interactive web applications. I care about writing clean code that actually works and looks good doing it.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                I've worked on projects ranging from e-commerce platforms to AI-powered systems 
-                for human-robot interaction. What excites me most is the intersection of 
-                technology and real-world impact — whether that's helping a business scale 
-                or making interactions with technology more natural.
+                I founded my own Shopify brands, developing UI components at Radius, and contributing to strategy at Mirai. I pick up new tools fast and get things shipped.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                When I'm not coding, you'll find me exploring new technologies, contributing 
-                to open source, or diving deep into research papers on machine learning 
-                and cognitive systems.
+                Outside of code, I workout, train martial arts and enjoy photography. I'm based in Amsterdam and always open to connecting with like-minded people :)
               </p>
             </motion.div>
 

@@ -7,54 +7,26 @@ export interface Project {
   year: string;
   githubUrl?: string;
   liveUrl?: string;
+  pdfURL?: string;
 }
 
 export const projects: Project[] = [
   {
-    id: "project-ecommerce-saas",
-    title: "E-Commerce SaaS Platform",
-    subtitle: "Full-Stack Platform • 2025",
-    description: "Multi-tenant e-commerce solution with real-time inventory, payment processing, and analytics dashboard.",
-    tags: ["Full-Stack", "SaaS", "React"],
-    year: "2025",
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
+    id: "project-password-generator",
+    title: "Secure Password Generator with Fisher-Yates Shuffle",
+    subtitle: "JavaScript, HTML, CSS • Feb 2026",
+    description: "Password generator with guaranteed character type inclusion and Fisher-Yates shuffle to eliminate positional bias. Features a modern flexbox UI with clipboard API integration for seamless copy functionality.",
+    tags: ["JavaScript", "HTML", "CSS"],
+    year: "2026",
+    githubUrl: "https://github.com/DanMalygin/password-generator",
+    liveUrl: "https://danmalygin.github.io/password-generator/",
   },
   {
     id: "project-asr-robots",
-    title: "ASR System for Social Robots",
-    subtitle: "AI & Machine Learning • 2024",
-    description: "Automatic speech recognition system optimized for human-robot interaction in noisy environments.",
-    tags: ["AI", "Python", "Research"],
-    year: "2024",
-    githubUrl: "https://github.com",
-  },
-  {
-    id: "project-analytics-dashboard",
-    title: "Real-Time Analytics Dashboard",
-    subtitle: "Frontend Development • 2024",
-    description: "Interactive data visualization platform with customizable widgets and real-time data streaming.",
-    tags: ["Frontend", "Data Viz", "TypeScript"],
-    year: "2024",
-    liveUrl: "https://example.com",
-  },
-  {
-    id: "project-task-automation",
-    title: "Workflow Automation Engine",
-    subtitle: "Backend & Automation • 2024",
-    description: "No-code automation platform for connecting APIs and building complex business workflows.",
-    tags: ["Automation", "Node.js", "API"],
-    year: "2024",
-    githubUrl: "https://github.com",
-  },
-  {
-    id: "project-design-system",
-    title: "Component Design System",
-    subtitle: "UI/UX & Development • 2023",
-    description: "Comprehensive design system with 50+ accessible components, documentation, and theming support.",
-    tags: ["Design System", "React", "Accessibility"],
-    year: "2023",
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-  },
-];
+    title: "Real-Time Incremental ASR System",
+    subtitle: "Python, ONNX, AI • May 2025 – Jul 2025",
+    description: "Real-time streaming speech recognition pipeline for human-robot interaction. Replaced cloud-based recognition with an offline incremental model, reducing latency and improving transcription stability.",
+    tags: ["Python", "Sherpa-ONNX", "ONNX Runtime", "PyTorch"],
+    year: "2025",
+    pdfURL: "/mythesis.pdf",
+  }]

@@ -56,7 +56,7 @@ export function ContactSection() {
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
-    
+
     if (!formData.name.trim()) {
       newErrors.name = "Name is required";
     } else if (formData.name.length > 100) {
@@ -83,23 +83,25 @@ export function ContactSection() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) return;
 
     setIsSubmitting(true);
 
-    // Simulated API call - replace with actual endpoint
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      
-      // Log for analytics hook
-      console.log("contact_submit_success", { timestamp: new Date().toISOString() });
-      
+      const response = await fetch("https://formspree.io/f/mreaovep", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) throw new Error("Failed to send");
+
       toast({
         title: "Message sent!",
-        description: "Thanks for reaching out. I'll get back to you soon.",
+        description: "Thanks for reaching out. I'll get back to you soon!",
       });
-      
+
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
       toast({
@@ -149,8 +151,8 @@ export function ContactSection() {
                   Get in Touch
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Whether you have a question, want to collaborate on a project, 
-                  or just want to say hi — my inbox is always open.
+                  Whether you have a question
+                  or just want to say hi, my inbox is always open.
                 </p>
               </div>
 
@@ -194,9 +196,8 @@ export function ContactSection() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 bg-background border ${
-                    errors.name ? "border-destructive" : "border-border"
-                  } text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors`}
+                  className={`w-full px-4 py-3 bg-background border ${errors.name ? "border-destructive" : "border-border"
+                    } text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors`}
                   placeholder="Your name"
                 />
                 {errors.name && (
@@ -217,9 +218,8 @@ export function ContactSection() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 bg-background border ${
-                    errors.email ? "border-destructive" : "border-border"
-                  } text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors`}
+                  className={`w-full px-4 py-3 bg-background border ${errors.email ? "border-destructive" : "border-border"
+                    } text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors`}
                   placeholder="your@email.com"
                 />
                 {errors.email && (
@@ -240,9 +240,8 @@ export function ContactSection() {
                   value={formData.message}
                   onChange={handleChange}
                   rows={5}
-                  className={`w-full px-4 py-3 bg-background border ${
-                    errors.message ? "border-destructive" : "border-border"
-                  } text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none`}
+                  className={`w-full px-4 py-3 bg-background border ${errors.message ? "border-destructive" : "border-border"
+                    } text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none`}
                   placeholder="Tell me about your project..."
                 />
                 {errors.message && (

@@ -1,27 +1,74 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<!doctype html> <!-- Tells the browser this is an HTML5 document -->
+
+<html lang="en"> <!-- Root HTML tag; 'lang' helps accessibility + SEO -->
+  <head> <!-- The head contains meta-data, not visible UI -->
+
+    <meta charset="UTF-8" /> 
+    <!-- Sets the character encoding so all symbols/text display correctly -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the layout responsive so it scales on mobile screens properly -->
+
     <title>Daniil | Software Engineer & Builder</title>
+    <!-- The title displayed on the browser tab and used for SEO -->
+
     <meta name="description" content="Personal portfolio of Daniil - Software Engineer specializing in Full-Stack Development, Frontend & UI/UX, and AI & Automation." />
+    <!-- Short description for search engines (SEO) and link previews -->
+
     <meta name="author" content="Daniil" />
+    <!-- Declares the author of the site (optional but useful) -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Tells the browser to start connecting early to Google Fonts server
+         This speeds up font loading -->
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Preconnect to the fonts' asset server to improve loading performance
+         'crossorigin' required for Google Fonts due to CORS -->
+
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" 
+      rel="stylesheet"
+    >
+    <!-- Loads the Inter font family with multiple weights for your website -->
+
+    <!-- ===== Open Graph meta tags (for Facebook, LinkedIn, etc.) ===== -->
 
     <meta property="og:title" content="Daniil | Software Engineer & Builder" />
+    <!-- Title shown when your website is shared -->
+
     <meta property="og:description" content="Creating thoughtful digital experiences through code." />
+    <!-- Description shown in link previews -->
+
     <meta property="og:type" content="website" />
+    <!-- Defines that the shared link is a website -->
+
     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- The preview image shown when someone shares your website -->
+
+    <!-- ===== Twitter Card meta tags ===== -->
 
     <meta name="twitter:card" content="summary_large_image" />
+    <!-- Tells Twitter to use a large preview card -->
+
     <meta name="twitter:site" content="@daniil" />
+    <!-- Your Twitter username (optional, used by Twitter preview) -->
+
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- The preview image used when someone shares your link on Twitter -->
   </head>
 
-  <body>
+  <body> <!-- Everything inside <body> is visible/rendered by the browser -->
+
     <div id="root"></div>
+    <!-- This empty div is where React will take over.
+         main.tsx finds this element and renders your whole React app inside it. -->
+
     <script type="module" src="/src/main.tsx"></script>
+    <!-- Loads the main entry file of your React app.
+         'type="module"' allows modern ES module imports.
+         Vite processes this file and boots your entire React application. -->
+
   </body>
 </html>
+<!-- End of HTML document -->

@@ -27,7 +27,7 @@ export function ServicesSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="services" className="py-32 relative" ref={ref}>
+    <section id="services" className="pt-32 pb-0 relative" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.div
           variants={containerVariants}
@@ -45,7 +45,7 @@ export function ServicesSection() {
               <motion.div
                 key={service.id}
                 variants={itemVariants}
-                className="group p-8 border border-border bg-card hover:border-primary/50 hover:bg-surface-elevated transition-all duration-300"
+                className="group p-8 border border-border bg-card hover:border-primary/50 hover:bg-surface-elevated transition-all duration-300 flex flex-col"
               >
                 {/* Index */}
                 <span className="text-5xl font-bold text-primary/30 group-hover:text-primary/50 transition-colors">
@@ -63,7 +63,7 @@ export function ServicesSection() {
                 </p>
 
                 {/* Technologies */}
-                <div>
+                <div className="mt-auto">
                   <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">
                     Tech Focus
                   </p>

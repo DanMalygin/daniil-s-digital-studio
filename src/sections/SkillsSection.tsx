@@ -26,7 +26,7 @@ export function SkillsSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="skills" className="py-32 bg-card relative" ref={ref}>
+    <section id="skills" className="py-32 bg-card relative scroll-mt-48" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.div
           variants={containerVariants}

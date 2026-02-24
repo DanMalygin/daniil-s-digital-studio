@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { ArrowRight, ArrowDown } from "lucide-react";
+import { ArrowRight, ArrowDown, ArrowDown01, ArrowDownCircle, LucideArrowDownZa } from "lucide-react";
+import LiquidEther from '@/components/LiquidEther';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -35,9 +36,27 @@ export function HeroSection() {
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5 pointer-events-none" />
-      
-      {/* Subtle grid pattern */}
+      <div className="absolute inset-0">
+        <LiquidEther
+          colors={['#6da3b6', '#3439c5', '#4eceef']}
+          mouseForce={20}
+          cursorSize={120}
+          isViscous={false}
+          viscous={30}
+          iterationsViscous={32}
+          iterationsPoisson={32}
+          resolution={0.5}
+          isBounce={false}
+          autoDemo={false}
+          autoSpeed={0}
+          autoIntensity={1}
+          takeoverDuration={0.25}
+          autoResumeDelay={3000}
+          autoRampDuration={0.6}
+        />
+      </div>
+
+      {/* Subtle grid pattern
       <div 
         className="absolute inset-0 opacity-[0.02] pointer-events-none"
         style={{
@@ -45,7 +64,7 @@ export function HeroSection() {
                            linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
           backgroundSize: '60px 60px',
         }}
-      />
+      /> */}
 
       <div className="container mx-auto px-6 pt-20 relative z-10">
         <motion.div
@@ -59,19 +78,20 @@ export function HeroSection() {
             variants={itemVariants}
             className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground mb-8"
           >
-            Software Engineer & Builder
+            Web Developer & Software Engineer
           </motion.p>
 
           {/* Main Headline */}
           <div className="mb-8">
             <motion.h1 variants={itemVariants} className="heading-display text-foreground">
-              CREATING
+              TURNING
             </motion.h1>
-            <motion.h1 variants={itemVariants} className="heading-display text-primary">
-              THOUGHTFUL
+            <motion.h1 variants={itemVariants} className="heading-display">
+              <span className="text-primary">IDEAS </span>
+              <span className="text-foreground">INTO</span>
             </motion.h1>
             <motion.h1 variants={itemVariants} className="heading-display text-foreground">
-              EXPERIENCES.
+              INTERFACES.
             </motion.h1>
           </div>
 
@@ -80,8 +100,7 @@ export function HeroSection() {
             variants={itemVariants}
             className="text-lg md:text-xl text-muted-foreground max-w-xl mb-12 leading-relaxed"
           >
-            I build digital products that solve real problems — from full-stack applications 
-            to intelligent automation systems.
+            I write code that makes designs real, with a sharp eye for detail and clean UI.
           </motion.p>
 
           {/* CTAs */}
@@ -91,13 +110,13 @@ export function HeroSection() {
               className="group flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 font-semibold text-sm uppercase tracking-wider hover:glow transition-all duration-300"
             >
               Contact
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowDown className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
             <button
               onClick={() => handleScrollTo("#works")}
               className="group flex items-center gap-3 border border-border text-foreground px-8 py-4 font-semibold text-sm uppercase tracking-wider hover:border-primary hover:text-primary transition-all duration-300"
             >
-              View Work
+              Projects
               <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
             </button>
           </motion.div>
