@@ -34,7 +34,7 @@ export function WorksSection() {
   };
 
   return (
-    <section id="works" className="py-32 relative" ref={ref}>
+    <section id="works" className="py-32 relative scroll-mt-20" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.div
           variants={containerVariants}
